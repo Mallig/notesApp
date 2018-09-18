@@ -9,5 +9,18 @@
     <div id='app'>hello world</div>
   </body>
 
+
+  <script src='./note-model.js'></script>
+  <script src='./note-list-model.js'></script>
+  <script src='./note-list-view.js'></script>
   <script src='./note-controller.js'></script>
+  <script>
+    list = new NoteList();
+    controller = new NoteController(list)
+    controller.addNote('Important thing to remember')
+    controller.updateView()
+  </script>
+
+  <script src="assert.js"></script>
+  <script src="note-model-tests.js"></script>
 </html>

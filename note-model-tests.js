@@ -18,6 +18,10 @@ emptyList = new NoteList()
 viewEmpty = new View(emptyList);
 assert.isEqual(viewEmpty.html(), '<ul></ul>')
 
+controller = new NoteController(noteList);
+assert.isEqual(controller.constructor.name, "NoteController")
+
+
 
 assert.showLog()
 
