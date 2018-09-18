@@ -13,7 +13,7 @@
 // assert.isIncluded('hello', 'zzz');
 // assert.isEqual(1 + 1, 5);
 
-firstNote = note("first note")
+firstNote = new Note("first note")
 
 assert.isEqual(firstNote.text(), "first note")
 
