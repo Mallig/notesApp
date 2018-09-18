@@ -14,7 +14,14 @@
 // assert.isEqual(1 + 1, 5);
 
 firstNote = new Note("first note")
+secondNote = new Note("second note")
 
 assert.isEqual(firstNote.text(), "first note")
+
+noteList = new NoteList()
+noteList.store(firstNote)
+noteList.store(secondNote)
+assert.isIncluded(noteList.notes, firstNote)
+assert.isIncluded(noteList.notes, secondNote)
 
 assert.showLog()
