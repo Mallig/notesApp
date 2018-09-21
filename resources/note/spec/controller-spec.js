@@ -1,4 +1,4 @@
-controller = new NoteController(noteList);
+controller = new NoteController(noteList, view);
 
 test.isEqual(controller.constructor.name, "NoteController")
 
