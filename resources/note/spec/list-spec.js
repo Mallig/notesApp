@@ -1,9 +1,24 @@
-noteList = new NoteList()
+function ListTests() {
 
-test.isEqual(noteList.constructor.name, "NoteList")
+  let noteList = new NoteList();
+  let mockNote = {
+    text: function() { return 'mock note' }
+  };
 
-noteList.store(firstNote)
-test.isIn(noteList.allNotes(), firstNote.text())
+  (function() {
+    test.isEqual(noteList.constructor.name, "NoteList")
+  })();
+  
+  (function() {
+    noteList.store(mockNote)
+    test.isIn(noteList.allNotes(), mockNote.text())
+  })();
 
-noteList.createNote('secondNote')
-test.isIn(noteList.allNotes(), 'secondNote')
+  (function() {
+    noteList.createNote('secondNote')
+    test.isIn(noteList.allNotes(), 'secondNote')
+  })();
+
+}
+
+ListTests();

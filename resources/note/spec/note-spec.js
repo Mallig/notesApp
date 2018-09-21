@@ -1,4 +1,15 @@
-firstNote = note("first note")
+function NoteTests() {
 
-test.isEqual(firstNote.constructor.name, "Note")
-test.isEqual(firstNote.text(), "first note")
+  let firstNote = note("first note");
+
+  (function() {
+    test.isEqual(firstNote.constructor.name, "Note")
+  })();
+
+  (function() {
+    test.isEqual(firstNote.text(), "first note")
+  })();
+
+}
+
+NoteTests()

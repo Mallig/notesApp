@@ -1,7 +1,29 @@
-controller = new NoteController(noteList, view);
+function ControllerTests() {
+  
+  let mockList = {
+    allNotes: function() { return ['mock note text', 'another mock notes text'] }
+  };
 
-test.isEqual(controller.constructor.name, "NoteController")
+  let mockView = {
+    html: function() { return '<ul><li>first note</li><li>secondNote</li></ul>' }
+  };
 
-controller.updateView()
-html = document.getElementById('app').innerHTML
-test.isEqual(html, '<ul><li>first note</li><li>secondNote</li></ul>')
+  let mockDocumentElement = {
+    innerHTML: ''
+  };
+
+  let controller = new NoteController(mockList, mockView);
+  
+  (function() {
+  test.isEqual(controller.constructor.name, "NoteController")
+  })();
+
+  controller.updateView(mockDocumentElement);
+  
+  (function() {
+    test.isEqual(mockDocumentElement.innerHTML, '<ul><li>first note</li><li>secondNote</li></ul>')
+  })();
+
+};
+
+ControllerTests();

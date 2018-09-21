@@ -15,10 +15,13 @@
   <script src='./resources/note/js/note-list-view.js'></script>
   <script src='./resources/note/js/note-controller.js'></script>
   <script>
-    list = new NoteList();
-    controller = new NoteController(list)
-    controller.addNote('Important thing to remember')
-    controller.updateView()
+    var list = new NoteList();
+    var view = new View(list);
+    var controller = new NoteController(list, view);
+    controller.addNote('Important thing to remember');
+    controller.addNote('Less important thing to remember');
+    var app = document.getElementById('app')
+    controller.updateView(app)
   </script>
 
 </html>
