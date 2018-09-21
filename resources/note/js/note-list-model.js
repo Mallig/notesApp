@@ -8,8 +8,15 @@
   }
 
   NoteList.prototype.createNote = function(content) {
-    let note = new Note(content)
-    this.store(note)
+    this.store(note(content))
+  }
+
+  NoteList.prototype.allNotes = function() {
+    let notes_text = []
+    this.notes.forEach(function(note) {
+      notes_text.push(note.text())
+    })
+    return notes_text
   }
 
   exports.NoteList = NoteList

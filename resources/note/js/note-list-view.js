@@ -4,10 +4,10 @@
   }
 
   View.prototype.html = function() {
-    arrayOfNotes = this.list.notes
-    result = "<ul>"
+    var arrayOfNotes = this.list.allNotes()
+    var result = "<ul>"
     arrayOfNotes.forEach(function(note) {
-      result += `<li>${note.text()}</li>`
+      result += `<li>${note}</li>`
     });
     result += "</ul>"
     return result;

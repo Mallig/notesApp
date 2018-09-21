@@ -1,7 +1,7 @@
 (function(exports) {
-  function NoteController(notelist) {
+  function NoteController(notelist, noteView) {
     this.list = notelist
-    this.view = new View(this.list)
+    this.view = noteView
   }
 
   NoteController.prototype.addNote = function(string) {

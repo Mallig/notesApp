@@ -8,10 +8,9 @@
     return this.content
   };
 
-  // function note(content) {
-  //   return new Note(content)
-  // };
+  function note(content) {
+    return new Note(content)
+  };
 
-  exports.Note = Note
-
+  exports.note = note;
 })(this)
