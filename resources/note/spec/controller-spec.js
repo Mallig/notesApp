@@ -4,7 +4,7 @@ function ControllerTests() {
     allNotes: function() { return ['mock note text', 'another mock notes text'] }
   };
 
-  let mockView = {
+  let mockListView = {
     html: function() { return '<ul><li>first note</li><li>secondNote</li></ul>' }
   };
 
@@ -12,7 +12,7 @@ function ControllerTests() {
     innerHTML: ''
   };
 
-  let controller = new NoteController(mockList, mockView);
+  let controller = new NoteController(mockList, mockListView);
   
   (function() {
   test.isEqual(controller.constructor.name, "NoteController")

@@ -1,17 +1,17 @@
 (function(exports) {
-  function View(list) {
+  function ListView(list) {
     this.list = list
   }
 
-  View.prototype.html = function() {
+  ListView.prototype.html = function() {
     var arrayOfNotes = this.list.allNotes()
     var result = "<ul>"
     arrayOfNotes.forEach(function(note) {
-      result += `<li>${note}</li>`
+      result += `<li>${note.substr(0, 20)}</li>`
     });
     result += "</ul>"
     return result;
   }
 
-  exports.View = View
+  exports.ListView = ListView
 })(this)

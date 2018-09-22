@@ -9,12 +9,12 @@ function ViewTests() {
 
   
   (function() {
-    let view = new View(mockList)
-    test.isEqual(view.html(), '<ul><li>mock note text</li><li>another mock notes text</li></ul>')
+    let view = new ListView(mockList)
+    test.isEqual(view.html(), '<ul><li>mock note text</li><li>another mock note...</li></ul>')
   })();
   
   (function() {
-    let view = new View(mockEmptyList)
+    let view = new ListView(mockEmptyList)
     test.isEqual(view.html(), '<ul></ul>')
   })();
   

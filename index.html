@@ -11,17 +11,18 @@
 
 
   <script src='./resources/note/js/note-model.js'></script>
-  <script src='./resources/note/js/note-list-model.js'></script>
-  <script src='./resources/note/js/note-list-view.js'></script>
-  <script src='./resources/note/js/note-controller.js'></script>
+  <script src='./resources/note/js/list-model.js'></script>
+  <script src='./resources/note/js/note-view.js'></script>
+  <script src='./resources/note/js/list-view.js'></script>
+  <script src='./resources/note/js/controller.js'></script>
   <script>
     var list = new NoteList();
-    var view = new View(list);
+    var view = new ListView(list);
     var controller = new NoteController(list, view);
     controller.addNote('Important thing to remember');
     controller.addNote('Less important thing to remember');
     var app = document.getElementById('app')
-    controller.updateView(app)
+    // controller.updateView(app)
   </script>
 
 </html>
