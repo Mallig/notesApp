@@ -30,9 +30,9 @@
 
   Test.prototype.isIn = function(a, b) {
     if (a.includes(b)) {
-      this.log.push('PASS: ' + b + 'is included in ' + a)
+      this.log.push('PASS: ' + b + ' is included in ' + a)
     } else {
-      this.log.push('FAIL: ' + b + 'is not included in ' + a)
+      this.log.push('FAIL: ' + b + ' is not included in ' + a)
     }
   };
 
