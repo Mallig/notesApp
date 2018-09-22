@@ -12,6 +12,14 @@
     }
   };
 
+  Test.prototype.isNotEqual = function(a, b) {
+    if (a !== b) {
+      this.log.push('PASS: ' + a + ' is not equal to ' + b)
+    } else {
+      this.log.push('FAIL: ' + a + ' is equal to ' + b)
+    }
+  }
+
   Test.prototype.isTruthy = function(a) {
     if (Boolean(a) === true) {
       this.log.push('PASS: ' + a + ' is truthy')

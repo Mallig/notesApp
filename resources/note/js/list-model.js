@@ -12,11 +12,7 @@
   }
 
   NoteList.prototype.allNotes = function() {
-    let notes_text = []
-    this.notes.forEach(function(note) {
-      notes_text.push(note.text())
-    })
-    return notes_text
+    return this.notes
   }
 
   exports.NoteList = NoteList

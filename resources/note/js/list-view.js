@@ -7,7 +7,11 @@
     var arrayOfNotes = this.list.allNotes()
     var result = "<ul>"
     arrayOfNotes.forEach(function(note) {
-      result += `<li>${note.substr(0, 20)}</li>`
+      var text = note.text();
+      if (text.length > 20) {
+        text = text.substr(0, 17).concat('...')
+      };
+      result += `<li><a href="#notes/${note.idNum()}">${text}</a></li>`
     });
     result += "</ul>"
     return result;

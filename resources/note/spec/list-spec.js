@@ -11,12 +11,12 @@ function ListTests() {
   
   (function() {
     noteList.store(mockNote)
-    test.isIn(noteList.allNotes(), mockNote.text())
+    test.isIn(noteList.allNotes(), mockNote)
   })();
 
   (function() {
-    noteList.createNote('secondNote')
-    test.isIn(noteList.allNotes(), 'secondNote')
+    noteList.createNote('mock second note')
+    test.isIn(noteList.allNotes()[1].text(), 'mock second note')
   })();
 
 }
